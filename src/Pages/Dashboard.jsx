@@ -11,9 +11,12 @@ function Dashboard() {
   const [filterByType, setFilterByType] = useState("");
   const [filterByStatus, setFilterByStatus] = useState("");
   const [sortByDate, setSortByDate] = useState("Newest");
+  
   useEffect(() => {
     fetchGrievances();
   }, []);
+
+  //all citizen grievance fetch api
   const fetchGrievances = async () => {
     try {
       const response = await fetchGrievancesAPI();
@@ -27,7 +30,7 @@ function Dashboard() {
       toast.error("An error occurred while fetching grievances.");
     }
   };
-
+//handle the grievance status changes
   const handleStatusChange = async (id, status) => {
     console.log("ghd", id, status);
 
@@ -44,6 +47,7 @@ function Dashboard() {
       toast.error("Some api error");
     }
   };
+  //filtering by type and status
   const filteredGrievances = grievances
     .filter((grievance) =>
       filterByType ? grievance.type === filterByType : true
@@ -51,7 +55,7 @@ function Dashboard() {
     .filter((grievance) =>
       filterByStatus ? grievance.status == filterByStatus : true
     );
-
+//sorting by date and time
   const sortedGrievance = [...filteredGrievances].sort((a, b) => {
     const date1 = new Date(a.createdAt);
     const date2 = new Date(b.createdAt);
