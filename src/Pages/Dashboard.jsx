@@ -95,7 +95,7 @@ function Dashboard() {
             display:"flex",
             flexDirection:"column",
             justifyContent:"center",
-            position: "sticky",
+            position: "",
             top: "18vh",
             maxHeight: "70vh",
             backgroundColor: "#333",
@@ -275,7 +275,7 @@ function Dashboard() {
         <div className="col-12 col-md-8 mt-5 mx-auto">
           <div
             className="grievance-list "
-            style={{ position: "sticky", left: "30vw" }}
+            style={{ position: "", left: "30vw" }}
           >
             {sortedGrievance.length ? (
               sortedGrievance.map((grievance) => (
