@@ -90,13 +90,11 @@ function Dashboard() {
         }}
       >
         <div
-          className="filter col-12 col-md-2 mb-3 p-4"
+          className="filter-sticky col-12 col-md-2 mb-3 p-4 mt-5"
           style={{
             display:"flex",
             flexDirection:"column",
             justifyContent:"center",
-            position: "",
-            top: "18vh",
             maxHeight: "70vh",
             backgroundColor: "#333",
             color: "white",

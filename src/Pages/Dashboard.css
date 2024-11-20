@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .filter-sticky {
+    position: sticky;
+    top: 18vh;
+    max-height: 70vh;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .filter-sticky {
+    position: static;
+  }
+}
