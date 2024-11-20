@@ -1,1 +1,2 @@
-export const Server_URL="http://localhost:3000"
+export const Server_URL="https://superhero-backend-758u.onrender.com"
+// "http://localhost:3000
