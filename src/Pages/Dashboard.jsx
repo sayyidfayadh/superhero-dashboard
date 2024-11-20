@@ -289,7 +289,7 @@ function Dashboard() {
                   style={{ borderRadius: "15px" }}
                 >
                   <div className="card-body text-light p-5">
-                  className={`card-text ${grievance.type === "Most Wanted Sightings" ? "text-light" : "text-danger"}`}
+                  <h5 className={`card-text ${grievance.type === "Most Wanted Sightings" ? "text-light" : "text-danger"}`} style={{textDecoration:"underline"}}>{grievance.type}</h5>
                     <h5 className="card-title d-flex justify-content-between align-items-center">
                       {grievance.name} | {grievance.email}{" "}
                       <select
